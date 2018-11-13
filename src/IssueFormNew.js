@@ -25,10 +25,10 @@ class IssueFormNew extends Component {
                             <div className="new-issue-form">
                                 <input onChange={this.titleChange} className="form-control pr-5 input-lg input-block input-contrast required title" placeholder="Title" aria-label="Title" required="required" type="text" name="title" id="title" value={this.state.title}/>
                             
-                                <input onChange={this.descChange} className="form-control pr-5 input-lg input-block input-contrast required description" placeholder="Description" aria-label="Description" required="required" type="text" name="description" id="description" value={this.state.description}/>
+                                <input onChange={this.usernameChange} className="form-control pr-5 input-lg input-block input-contrast required username" placeholder="Username" aria-label="Username" required="required" type="text" name="username" id="username" value={this.state.username}/>
 
                                 <div className="write-content upload-enabled">
-                                    <textarea onChange={this.descChange} name="issue_body" id="issue_body" placeholder="Leave a comment" aria-label="Comment body" className="form-control input-contrast comment-form-textarea"></textarea>
+                                    <textarea onChange={this.descChange} name="description" id="description" placeholder="Comment the issue" aria-label="Issue body" className="form-control input-contrast comment-form-textarea" value={this.state.description}></textarea>
                                 </div>
 
                                 <div className="form-actions">
@@ -47,6 +47,12 @@ class IssueFormNew extends Component {
 
 
     titleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        });
+    }
+
+    usernameChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         });

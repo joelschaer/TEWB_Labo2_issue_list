@@ -6,11 +6,24 @@ export const addIssue = (issue) => {
     issue.id = lastIssueId;
     issue.status = "open";
     issues.push(issue);
-    console.log(issues);
   }
 
 export const getIssue = (id) => {
   return issues.find(obj => {
+    // eslint-disable-next-line
     return obj.id == id;
   })
+}
+
+export const deleteIssue = (id) => {
+  const element = issues.find(obj => {
+      // eslint-disable-next-line
+      return obj.id == id;
+    });
+  const index = issues.indexOf(element);
+
+  if (index !== -1) {
+    issues.splice(index, 1);
+}
+
 }

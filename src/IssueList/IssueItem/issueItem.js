@@ -5,6 +5,8 @@ import IssueItemRight from './issueItemRight';
 
 import './issueItem.css'
 
+import {deleteIssue} from '../../IssueListData'
+
 //Create component
 class IssueItem extends Component {
     state={
@@ -22,12 +24,16 @@ class IssueItem extends Component {
 
                     <IssueItemContent id={this.state.id} title={this.state.title} username={this.state.username}/>
 
-                    <IssueItemRight />
+                    <IssueItemRight deleteIssue={this.deleteIssue}/>
 
                 </div>
             </div>
         );
     }// render
+
+    deleteIssue = () => {
+        deleteIssue(this.state.id);
+    }
 }
 
 export default IssueItem;

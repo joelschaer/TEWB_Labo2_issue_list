@@ -1,7 +1,7 @@
 import React from 'react';
-import { AccessAlarm, ThreeDRotation, HighlightOff } from '@material-ui/icons';
+import { HighlightOff } from '@material-ui/icons';
 
-const IssueItemRight = ({ title }) => {
+const IssueItemRight = ({ title, deleteIssue }) => {
     return (
         <div className="issue-item-right float-right col-2">
       <div className="float-left col-7 pt-2 pr-3 text-right">
@@ -14,7 +14,7 @@ const IssueItemRight = ({ title }) => {
 
       <div className="float-right col-5 no-wrap pt-2 pr-3 text-right">
         <span className="muted-link" aria-label="1 comment">
-          <span className="text-small text-bold"><HighlightOff/></span>
+          <span className="text-small text-bold"><HighlightOff onClick={deleteIssue}/></span>
         </span>
       </div>
     </div>
