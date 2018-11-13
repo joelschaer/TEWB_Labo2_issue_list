@@ -11,7 +11,8 @@ import {getIssue} from '../IssueListData.js'
 class IssuePage extends Component {
     render() {
         const issue = getIssue(this.props.match.params.id);
-        if(issue === null){
+        // eslint-disable-next-line
+        if(issue == null){
             return <Redirect to='/' />
         }
 
