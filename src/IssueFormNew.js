@@ -33,7 +33,7 @@ class IssueFormNew extends Component {
 
                                 <div className="form-actions">
                                     <button type="submit" className="btn btn-primary">
-                                    Submit new issue
+                                    {this.props.submitText}
                                     </button>
                                 </div>
                             

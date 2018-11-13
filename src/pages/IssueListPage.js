@@ -5,6 +5,7 @@ import IssueList from '../IssueList/IssueList';
 import IssueFormNew from '../IssueFormNew';
 
 import Button from '../elements/Button'
+import {issues} from '../IssueListData.js'
 
 //Create component
 class IssueListePage extends Component {
@@ -17,7 +18,7 @@ class IssueListePage extends Component {
         <div className="Sissues-listing">
 
         <div className="mt-6 mb-4">  
-          <IssueList/>
+          <IssueList issues={issues}/>
         </div>
 
         <div className="mb-4">  
@@ -26,7 +27,7 @@ class IssueListePage extends Component {
 
         <div className="mb-4">  
           <div className={this.state.formHidden ? 'hidden' : ''}>
-            <IssueFormNew showHideForm={this.showHideForm}/>
+            <IssueFormNew submitText={'Submit new Issue'} showHideForm={this.showHideForm}/>
           </div>
         </div>
         </div>

@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import IssueItem from './IssueItem/issueItem'
 import './IssueList.css';
 
-import {issues} from '../IssueListData.js'
-
 
 //Create component
 class IssueList extends Component {
     render() {
-
+        const {issues} = this.props;
         const issueList = issues.map((item, index) => {
             return (
                 <IssueItem id={item.id} title={item.title} status={item.status} key={index} username={item.username} />

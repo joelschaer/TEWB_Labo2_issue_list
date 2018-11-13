@@ -2,7 +2,6 @@ import React from 'react';
 
 import {Link} from 'react-router-dom'
 
-
 const IssueItemContent = ({ id, title, username}) => {
     return (
         <div className="issue-item-content float-left col-9 lh-condensed p-2">
