@@ -42,3 +42,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+## Idée
+
+Pour la version desktop, on pourrait faire des petites fenetre syle : https://www.behance.net/ , et plus il y a de likes sur un post plus il sera gros, moins il y a de likes ( plus de dislikes ) plus il est petite
+
+
+
